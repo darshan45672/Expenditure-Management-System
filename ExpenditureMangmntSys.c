@@ -7,3 +7,6 @@
 int main(void) {
      printf("Hello wrold");
 }
+
+
+//define your functions here
