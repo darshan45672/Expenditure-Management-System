@@ -19,9 +19,9 @@ void login(){
      printf("\n\n\n\n\n\n#######################################################################################################################################################################");
      printf("\n\n\n\t\t\t\t\t\t\t\t\t EXPENDITURE MANAGEMENT SYSTEM");
      printf("\n\n\n\t\t\t\t\t\t\t\t\t\t USER LOGIN");
-     printf("\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : \t");
+     printf("\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : \t");  //taking username from user
      scanf("%s",UserNameInpt);
-     printf("\n\n\t\t\t\t\t\t\t\t\t PASSWORD : \t");
+     printf("\n\n\t\t\t\t\t\t\t\t\t PASSWORD : \t");  //taking password from the user
      scanf("%s",&UserPsswrd);
      if(strcmp(UserNameInpt, "Admin")==0){
           if (strcmp(UserPsswrd, "13579")==0)
