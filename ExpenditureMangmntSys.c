@@ -23,18 +23,18 @@ void login(){
      scanf("%s",UserNameInpt);
      printf("\n\n\t\t\t\t\t\t\t\t\t PASSWORD : \t");  //taking password from the user
      scanf("%s",&UserPsswrd);
-     if(strcmp(UserNameInpt, "Admin")==0){
-          if (strcmp(UserPsswrd, "13579")==0)
+     if(strcmp(UserNameInpt, "Admin")==0){               //comparing user given username and original user name using built in function
+          if (strcmp(UserPsswrd, "13579")==0)             //comparing user given password and original user password using built in function
           {
                printf("\n\n\n\t\t\t\t\t\t\t\t\tLogin Sucessfull !!\n");
                printf("\n\t\t\t\t\t\t\t\t\tWelcome %s \n",UserNameInpt);
           }
           else{
-               printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Password\n");
+               printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Password\n");    //displaying invalid password if password is correct though username is correct
           }
      }
      else{
-          printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");
+          printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");    // 
      }
      printf("\n\n\n#######################################################################################################################################################################");
 }
