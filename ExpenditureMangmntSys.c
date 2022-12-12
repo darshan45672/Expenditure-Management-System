@@ -34,7 +34,7 @@ void login(){
           }
      }
      else{
-          printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");    // 
+          printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");    // displaying invalid username if entered username is wrong
      }
      printf("\n\n\n#######################################################################################################################################################################");
 }
