@@ -1,7 +1,7 @@
 /* Drop your codes here */
 #include<stdio.h>
 #include<string.h>
-#include<windows.h>
+#include<windows.h> // new header file instead of <conio.h>
 //decalre ypur functions here
 void login();
 
