@@ -14,7 +14,7 @@ int main(void) {
 
 //define your functions here
 void login(){
-     system("cls");
+     system("cls");    //to clear the terminal screen
      char UserPsswrd[10], UserNameInpt[10];
      printf("\n\n\n\n\n\n#######################################################################################################################################################################");
      printf("\n\n\n\t\t\t\t\t\t\t\t\t EXPENDITURE MANAGEMENT SYSTEM");
