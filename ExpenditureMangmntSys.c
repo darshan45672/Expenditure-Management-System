@@ -12,7 +12,7 @@ int main(void) {
 }
 
 
-//define your functions here
+//define your functions
 void login(){
      system("cls");    //to clear the terminal screen
      char UserPsswrd[10], UserNameInpt[10];
