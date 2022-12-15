@@ -7,7 +7,7 @@ void login();
 void guide();
 
 
-//Main function
+// Main function
 int main() {
 	printf("                                                                                ________________________________________________\n");
     printf("                                                                               |           EXPENDITURE MANAGEMENT SYSTEM        |\n");
