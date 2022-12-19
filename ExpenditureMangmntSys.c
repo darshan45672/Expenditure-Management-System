@@ -4,11 +4,13 @@
 #include<windows.h> // new header file instead of <conio.h>
 //decalre ypur functions here
 void login();
+void acess();
 
 //main function
 int main(void) {
      login();
-     printf("\nHello wrold");
+     system("cls");
+     acess();
 }
 
 
@@ -16,6 +18,8 @@ int main(void) {
 void login(){
      system("cls");    //to clear the terminal screen
      char UserPsswrd[10], UserNameInpt[10];
+     int count = 0;
+     do{
      printf("\n\n\n\n\n\n#######################################################################################################################################################################");
      printf("\n\n\n\t\t\t\t\t\t\t\t\t EXPENDITURE MANAGEMENT SYSTEM");
      printf("\n\n\n\t\t\t\t\t\t\t\t\t\t USER LOGIN");
@@ -37,4 +41,21 @@ void login(){
           printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");    // displaying invalid username if entered username is wrong
      }
      printf("\n\n\n#######################################################################################################################################################################");
+     count++;
+  }while(count==5); 
+  if (count==5){
+     printf("acess denied");
+  }
+}
+void acess(){
+     system("cls");
+     printf("\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n ");
+     printf("\n\t\t\t\t\t\t\t\t\t WELCOME \n");
+     printf("\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n ");
+     printf("\n\n\n\n");
+     printf("Press < 0 > to exit");
+     printf("\nPress < 1 > for Info ");
+     printf("\nPress < 2 > to check");
+
+
 }
