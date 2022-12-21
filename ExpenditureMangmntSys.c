@@ -1,40 +1,128 @@
-/* Drop your codes here */
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include<string.h>
-#include<windows.h> // new header file instead of <conio.h>
-//decalre ypur functions here
-void login();
+#include<windows.h>
 
-//main function
-int main(void) {
-     login();
-     printf("\nHello wrold");
+void registration();
+void entry();
+void guide();
+void login();
+void guide();
+
+struct details {
+char  userName[20];
+char  passWord[20];
+};
+
+
+// Main function
+int main() {
+     system("cls");
+	printf("                                                                                ________________________________________________\n");
+    printf("                                                                               |           EXPENDITURE MANAGEMENT SYSTEM        |\n");
+    printf("                                                                               |________________________________________________|\n\n");
+    entry();
+int choice;
+	printf(" \n\n                                                                              Enter your choice here : ");
+	scanf("%d",&choice);
+	switch(choice) {
+		/*case 1 : {
+			 registration();
+		     break;
+			 } */
+
+		case 2 :{
+		          login();
+		         break;	 
+		        }
+	}	 
+
+	
+     	
+	 	return 0;
 }
 
 
-//define your functions here
-void login(){
-     system("cls");    //to clear the terminal screen
-     char UserPsswrd[10], UserNameInpt[10];
-     printf("\n\n\n\n\n\n#######################################################################################################################################################################");
-     printf("\n\n\n\t\t\t\t\t\t\t\t\t EXPENDITURE MANAGEMENT SYSTEM");
-     printf("\n\n\n\t\t\t\t\t\t\t\t\t\t USER LOGIN");
-     printf("\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : \t");  //taking username from user
-     scanf("%s",UserNameInpt);
-     printf("\n\n\t\t\t\t\t\t\t\t\t PASSWORD : \t");  //taking password from the user
-     scanf("%s",&UserPsswrd);
-     if(strcmp(UserNameInpt, "Admin")==0){               //comparing user given username and original user name using built in function
-          if (strcmp(UserPsswrd, "13579")==0)             //comparing user given password and original user password using built in function
-          {
-               printf("\n\n\n\t\t\t\t\t\t\t\t\tLogin Sucessfull !!\n");
-               printf("\n\t\t\t\t\t\t\t\t\tWelcome %s \n",UserNameInpt);
-          }
-          else{
-               printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Password\n");    //displaying invalid password if password is correct though username is correct
-          }
-     }
-     else{
-          printf("\n\n\n\t\t\t\t\t\t\t\t\tInvalid Username\n");    // displaying invalid username if entered username is wrong
-     }
-     printf("\n\n\n#######################################################################################################################################################################");
+void entry() {
+printf("\n\n");
+printf("                                                                                      1.    REGISTER\n");
+printf("                                                                                      2.    LOGIN\n");
+}
+
+void registration() {
+	
+	
+	}
+
+// This function represents various operations performed in this program.
+void guide() {
+printf("\n\n");
+printf("                                                                                      1.    UPDATE\n");	
+printf("                                                                                      2.    STATUS\n");	
+//printf("                                                                                     3.    HOME PAGE\n");	
+}
+
+
+
+// Function to login using an existing username and password.
+void login() {
+     char userName[10], passWord[10];
+     int chance = 5;
+     system("cls");
+
+     do {
+     	printf("\n\t\t                                                                          USERNAME : ");
+     	scanf("%s",userName);
+     	
+     	int test = strcmp(userName, "minimizer");
+     	
+     	if(test == 0) { 
+     	printf("                                                                                          PASSWORD : "); 
+     	scanf("%s",passWord);
+     	
+     	test = strcmp(passWord,"123");
+     	if(test == 0) {
+     		    printf("\n                                                                                             ---LOGIN SUCCESSFUL---\n\n\n");
+	printf("                                                                                ________________________________________________\n");
+    printf("                                                                               |    WELCOME TO EXPENDITURE MANAGEMENT SYSTEM    |\n");
+    printf("                                                                               |________________________________________________|\n\n");
+	 guide();
+	int choice;
+	printf(" \n\n                                                                              Enter your choice here : ");
+	scanf("%d",&choice);
+	switch(choice) {
+
+	    /*case 1 :{
+		          update();
+				 break;
+				 }
+
+	     case 2 :{
+			      status();
+				 break;
+				 } 
+
+	    case 3 : {
+			       guide();
+				  break;
+				  } */
+				  default : printf("invalid choice");
+	}
+	
+     			exit(0);
+     			} else {
+                printf(" \n                                                                                        INVALID PASSWORD ! TRY AGAIN\n\n");
+                   chance--; 
+               }
+     	}
+		 else {
+     	 printf("\n                                                                                        INVALID USERNAME ! TRY AGAIN\n\n");
+     	 chance--;
+        }
+     	 if(chance == 0){
+		 printf("\n\n                                                                                                   ACCESS DENIED");
+     		exit(0); 
+		 }
+		 }while(chance != 0);
+       
 }
